@@ -6,17 +6,25 @@
 // $(()=>{
 //     console.log('jquery works fine')
 // })
+$(()=>{
+
+
 
 $("#btnSave").on('click',async()=>{
-    console.log($("#txtIncome").val())
+    //console.log($("#txtIncome").val())
 
-    let result=await fetch('http://localhost:5000/Income/add',{
+
+//return;
+    let result=await fetch('http://localhost:5000/Income/addIncome',{
         method:'POST',
         headers: {
             'Content-Type': 'application/json'
           },
-          body:JSON.stringify({amount:$("#txtIncome").val()})
+          body:JSON.stringify({amount:parseInt($("#txtIncome").val())})
     })
+    
+   //let result=await fetch('http://localhost:5000/Income/get-all') //fetch('http://localhost:5000/WeatherForecast');
+
     if(result.ok){
         let response=await result.json();
         console.log(response)
@@ -25,4 +33,6 @@ $("#btnSave").on('click',async()=>{
     }
 
     $("#txtIncome").val('')
+})
+
 })

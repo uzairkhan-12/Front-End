@@ -3,11 +3,16 @@ $(()=>{
     $("#btnSave").on('click',async()=>{
     let ExpenditureTypeName=$("#txtIncome").val();
 
-    // if(!ExpenditureTypeName || typeof(ExpenditureTypeName)!=="String"){
-    //     $("#emailHelp").removeClass('d-none');
-    //     return;
-    // }
-   
+    /*
+    if(!ExpenditureTypeName || typeof(ExpenditureTypeName)!=="String"){
+        $("#emailHelp").removeClass('d-none');
+        return;
+    }*/
+
+    if(!ExpenditureTypeName.trim()){
+      $("#emailHelp").removeClass('d-none');
+      return;
+   }
     
         let result=await fetch('http://localhost:5000/ExpenditureType/add',{
             method:'POST',

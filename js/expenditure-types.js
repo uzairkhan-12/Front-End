@@ -3,10 +3,8 @@ async function loadIncome(){
     
     if(result.ok){
         let expanditureTypes=await result.json();
-        console.log(expanditureTypes);
-        
         expanditureTypes.map(x => {
-            
+            console.log(x)
         });
     }
     

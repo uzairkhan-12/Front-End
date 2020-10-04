@@ -29,15 +29,17 @@ $(()=>{
             console.log(result)
         }
         $("#txtIncome").val('')
+    })
+      
+    })
+      
+    $("#txtIncome").on('keyup',()=>{
+        let ExpenditureTypeName=$("#txtIncome").val();
+        if(!ExpenditureTypeName.trim()){
+            $("#emailHelp").removeClass('d-none');  
+            console.log('working')
+        }else {
+            $("#emailHelp").addClass('d-none');
+        }
 
-        
-        $("#txtIncome").on('keyup',()=>{
-            if(!ExpenditureTypeName || typeof(ExpenditureTypeName)!=="String"){
-                $("#emailHelp").removeClass('d-none');  
-                console.log('working')
-            }else {
-                $("#emailHelp").addClass('d-none');
-            }
-    })
-    })
-    })
+})

@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      .hideRow{
+        display: none;
+      }
+    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,29 +40,23 @@
                 <th scope="col">Active</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row"></th>
-                <td id="firstTd"></td>
-                <td></td>
-                <td><button type="button" class="btn btn-outline-danger">inAcitve Mark active?</button></td>
-                <td><button type="button" class="btn btn-link">Edit</button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Fuel</td>
-                <td>2/sep/2020</td>
-                <td><button type="button" class="btn btn-outline-primary">Active Mark inAcitve?</button></td>
-                <td><button type="button" class="btn btn-link">Edit</button></td>
-              </tr>
-              <tr>
+            <tbody id="tableBody">
+              
+              <!-- <tr>
                 <th scope="row">3</th>
                 <td>Fish</td>
                 <td>2/sep/2020</td>
                 <td><button type="button" class="btn btn-outline-danger">inAcitve Mark active?</button></td>
                 <td><button type="button" class="btn btn-link">Edit</button></td>
-              </tr>
+              </tr> -->
             </tbody>
+            <tr id="tempRow" class="hideRow">
+              <th scope="row"><span id="sno"></span> </th>
+              <td><span id='typeName'></span></td>
+              <td><span id='createdDate'></span></td>
+              <td><button type="button" class="btn btn-outline-primary">Active Mark inAcitve?</button></td>
+              <td><button type="button" class="btn btn-link">Edit</button></td>
+            </tr>
           </table>
     </div>
   </div>

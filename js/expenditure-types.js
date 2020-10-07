@@ -22,10 +22,10 @@ newRow.find("#actionButton").on('click',()=>{
 })
 
 if(row.isActive){
-    newRow.find("#actionButton").addClass('btn btn-outline-danger')
+    newRow.find("#actionButton").addClass('btn btn-outline-primary')
     newRow.find("#actionButton").text('Active, Mark Inactive')
 }else{
-    newRow.find("#actionButton").addClass('btn btn-outline-primary')
+    newRow.find("#actionButton").addClass('btn btn-outline-danger')
     newRow.find("#actionButton").text('InActive, Mark active')
 }
 newRow.find("#actionButton").removeAttr("id");

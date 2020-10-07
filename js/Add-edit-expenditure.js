@@ -25,8 +25,6 @@ $(()=>{
      if(result.ok){
           window.location.href='/Expenditure-types.html';
         }else{
-    
-            console.log(result)
         }
         $("#txtIncome").val('')
     })
@@ -34,10 +32,9 @@ $(()=>{
     })
       
     $("#txtIncome").on('keyup',()=>{
-        let ExpenditureTypeName=$("#txtIncome").val();
+        let ExpenditureTypeName = $("#txtIncome").val();
         if(!ExpenditureTypeName.trim()){
             $("#emailHelp").removeClass('d-none');  
-            console.log('working')
         }else {
             $("#emailHelp").addClass('d-none');
         }

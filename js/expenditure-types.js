@@ -1,4 +1,5 @@
 async function loadIncome(){
+    $("#tableBody").empty();
     let result=await fetch('http://localhost:5000/ExpenditureType/get-types')
     
     if(result.ok){
@@ -29,18 +30,20 @@ if(row.isActive){
 }
 newRow.find("#actionButton").removeAttr("id");
 newRow.find("#linkEdit").removeAttr("id").attr('href',"/Add-edit-expenditure-types.html?id="+row.id);
-
 $("#tableBody").append(newRow);
 }
 
 loadIncome();
 
 async function toggleType(typeId){
-    console.log('add more code',typeId)// code to be written by Uzair
-    //
-    //fetch api calling with new url
-    // when OK call loadIncome();
-    // remove un-necessary code
+    let result=await fetch('http://localhost:5000/ExpenditureType/toggle-type?typeId='+typeId)
+    if(result.ok){
+        loadIncome();
+        console.log(typeId);
+    }
+    else{
+        console.log('error')
+    }
 }
 
     

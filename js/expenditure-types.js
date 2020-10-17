@@ -1,7 +1,6 @@
 async function loadIncome(){
     $("#tableBody").empty();
-    let result=await fetch('http://localhost:5000/ExpenditureType/get-types')
-    
+    let result=await fetch('http://localhost:5000/ExpenditureType/get-types')    
     if(result.ok){
         let expanditureTypes=await result.json();
         expanditureTypes.map((x,index) => {
@@ -45,5 +44,17 @@ async function toggleType(typeId){
         console.log('error')
     }
 }
-
+$("#deleteButton").on('click',() => {
+    deleteData()
+})
+const deleteData = async(id) => {
+    console.log(id);
+    let result = fetch("http://localhost:5000/ExpenditureType/delete", {
+    method: "DELETE",  
+    headers: {
+        "Content-Type": "application/json",
+  },
+      body: JSON.stringify({ result }),
+    })
+  }
     

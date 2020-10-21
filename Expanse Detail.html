@@ -33,28 +33,16 @@
                 <th scope="col">Date</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>2,500</td>
-                <td>2-9-2020 5:10 AM</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>2,500</td>
-                <td>2-9-2020 5:10 AM</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>2,500</td>
-                <td>2-9-2020 5:10 AM</td>
-              </tr>
-              <tr>
-                
-                <td>Total</td>
-                <td>7500</td>
-              </tr>
+            <tbody id="tableBody">
+              
             </tbody>
+            <tr id="tempRow" class="hideRow">
+              <th scope="row"><span id="sno"></span> </th>
+              <td><span id='amount'></span></td>
+              <td><span id='createdDate'></span></td>
+            </tr>
+            <tr>
+            </tr>
           </table>
     </div>
   </div>
@@ -65,5 +53,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/detail.js"></script>
   </body>
 </html>

@@ -7,3 +7,15 @@ if(result.ok){
 }
 }
 loadIncome();
+
+async function loadExpanditure(){
+    let result = await fetch('http://localhost:5000/Dashboard/get-expanditure')
+    if(result.ok){
+        let expanditure = await result.json();
+        $("#expanditure").text("PKR "+expanditure)
+    }
+    else{
+        console.log('error')
+    }
+}
+loadExpanditure();
